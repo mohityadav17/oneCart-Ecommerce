@@ -50,7 +50,7 @@ function Login() {
     
                 const result = await axios.post(serverUrl + "/api/auth/googlelogin" ,{name , email} , {withCredentials:true})
                 console.log(result.data)
-                getCurrentUser()
+                await getCurrentUser()
             navigate("/")
     
             } catch (error) {
